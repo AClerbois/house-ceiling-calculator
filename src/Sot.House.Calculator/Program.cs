@@ -34,7 +34,7 @@ namespace Sot.House.Calculator
             decimal totalTotalCrossbarDistance = 0;
             foreach (var room in Rooms)
             {
-                Console.WriteLine($"{string.Format("{0,35}", room.Name)} \t Start crossbar : {room.CountCrossbarStartInBreadth}x{room.CountCrossbarStartInLength} \t Attach : {room.CountAttach} \t Rider : {room.Rider} \t Crossbar count : {room.TotalCrossbar} (distance: {room.TotalCrossbarDistance})");
+                Console.WriteLine($"{string.Format("{0,35}", room.Name)} \t Start : {room.CountCrossbarStartInBreadth}x{room.CountCrossbarStartInLength} \t Attach : {room.CountAttach} \t Rider : {room.Rider} \t Crossbar count : {room.TotalCrossbar} (distance: {room.TotalCrossbarDistance})");
                 totalCountCrossbarStartInBreadth += room.CountCrossbarStartInBreadth;
                 totalCountCrossbarStartInLength += room.CountCrossbarStartInLength;
                 totalCountAttach += room.CountAttach;
@@ -46,7 +46,7 @@ namespace Sot.House.Calculator
             Console.WriteLine();
             Console.WriteLine();
             Console.WriteLine();
-            Console.WriteLine($"{string.Format("{0,35}", $"Total for {Rooms.Count} room with L:{Constant.MinimalCrossbarInLength} & l:{Constant.MinimalCrossbarInBreadth}")}  \t Start crossbar : {totalCountCrossbarStartInBreadth}x{totalCountCrossbarStartInLength} \t Attach : {totalCountAttach} \t Rider : {totalRider} \t Crossbar count : {totalTotalCrossbar} (distance: {totalTotalCrossbarDistance} \t crossbar with recuperation : {Math.Floor(totalTotalCrossbarDistance / Constant.CrossbarSize) + 1 } )");
+            Console.WriteLine($"{string.Format("{0,35}", $"Total for {Rooms.Count} room with L:{Constant.MinimalCrossbarInLength} & l:{Constant.MinimalCrossbarInBreadth}")}  \t Start : {totalCountCrossbarStartInBreadth}x{totalCountCrossbarStartInLength} \t Attach : {totalCountAttach} \t Rider : {totalRider} \t Crossbar count : {totalTotalCrossbar} (distance: {totalTotalCrossbarDistance} \t crossbar with recuperation : {Math.Floor(totalTotalCrossbarDistance / Constant.CrossbarSize) + 1 } )");
         }
     }
 }
